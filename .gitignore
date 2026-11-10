@@ -1,0 +1,43 @@
+# ================= 虚拟环境 =================
+.venv/
+venv/
+env/
+
+# ================= Python 缓存 =================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ================= IDE / 编辑器 =================
+.idea/
+.vscode/
+*.swp
+
+# ================= 测试与检查缓存 =================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# ================= 系统文件 =================
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ================= 项目运行产物 =================
+# 由 main.py 自动生成的中间数据、清洗结果和质量报告
+output/
+
+# ================= 临时文件 =================
+*.log
+*.tmp
+# Excel 打开文件时产生的锁文件
+~$*.xlsx

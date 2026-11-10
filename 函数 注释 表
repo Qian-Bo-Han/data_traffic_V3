@@ -1,0 +1,40 @@
+flow_detail_all.csv：每15分钟的流量明细。
+
+flow_summary_all.csv：总流量和转向比例。
+
+signal_all.csv：信号配时。
+
+
+
+#给我所有 Excel 路径 + 我想找的路口编号。
+    extract_path(excel_files,intersection):
+
+获取文件路径 ：extract_path(excel_files,intersection):
+
+再处理信号配时 ： extract_signal_data(file_path, intersection)
+
+15分钟流量明细表 ：flow_detail_df(file_path, intersection_id)
+
+转向比例 + 总流量汇总表 ：flow_summary_df(file_path, intersection_id)
+
+质量检查：
+    看数据有没有缺：check_missing(df)
+    看有没有重复行：check_duplicate(df)
+    看每路口 每时段数据是否完整：check_record_count(df)
+
+------------------------------------------------------------------
+extract.py
+    只写：
+    “怎么提取数据”的函数
+
+quality.py
+    只写：
+    “怎么检查数据”的函数
+
+main.py
+负责：
+调用提取函数
+↓
+得到 signal_summary 等表
+↓
+调用质量检查函数
